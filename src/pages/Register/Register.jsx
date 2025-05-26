@@ -4,6 +4,7 @@ import React, { use } from 'react';
 
 import registerLottie from '../../assets/lotties/register.json'
 import { AuthContext } from '../../contexts/Authcontext/Authcontext';
+import SocialLogin from '../Shared/SocialLogin';
 
 const Register = () => {
 
@@ -17,7 +18,7 @@ const Register = () => {
 
         createUser(email, password)
         .then(res => {
-            console.log(res)
+
             console.log(res.user)
         })
         .catch(error => {
@@ -46,6 +47,7 @@ const Register = () => {
                             <button className="btn btn-neutral mt-4">Register</button>
                         </fieldset>
                         </form>
+                        <SocialLogin></SocialLogin>
                     </div>
                 </div>
             </div>
